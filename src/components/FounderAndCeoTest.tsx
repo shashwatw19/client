@@ -61,7 +61,7 @@ export const FoundersGrid: React.FC<{ founders?: Founder[]; className?: string }
         animate="show"
         transition={{ staggerChildren: 0.06 }}
       >
-        {founders.map((f, idx) => (
+        {founders.map((f) => (
           <motion.article
             key={f.id}
             className="group relative rounded-2xl overflow-hidden bg-gray-50 shadow-sm border border-gray-100"

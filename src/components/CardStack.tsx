@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 
-let interval: any;
+// let interval: any;
 
 type Card = {
   id: string;
