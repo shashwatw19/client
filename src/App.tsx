@@ -3,7 +3,7 @@ import { createBrowserRouter,  NavLink, RouterProvider } from "react-router";
 import logo from "./assets/naicos-logo.webp";
 import { motion } from "motion/react";
 import  { useEffect, useState } from "react";
-import OnlyLogo from "./assets/OnlyLogoSvg-cropped.svg";
+// import OnlyLogo from "./assets/OnlyLogoSvg-cropped.svg";
 import loaderGif from "./assets/naicos Loader.gif";
 import { BlurIn } from "./components/AnimatedComponents/BlurIn";
 import { ContainerScroll } from "./components/AnimatedComponents/ContainerScroll";
@@ -17,16 +17,15 @@ import { CompanySection } from "./pages/Company";
 import MainLayout from "./layout/MainLayout";
 import { SlideOne } from "./components/CeoAndFounders/SlideOne";
 import {  SlideTwo } from "./components/CeoAndFounders/SlideTwo";
-import aicatalog from "../src/assets/aicatalog.jpg"
-import { OverlappingScrollSlider } from "./components/CeoAndFounders/OverlappingSlideScroll";
 
+import { OverlappingScrollSlider } from "./components/CeoAndFounders/OverlappingSlideScroll";
 import Catalog from "./pages/Catalog";
 import Pricing from "./pages/Pricing";
 import Fulfillment from "./pages/Fulfillment";
 import Growth from "./pages/Growth";
 import HeroWithLead from "./pages/Contact";
 import TrackShipment from "./pages/TrackShipment";
-
+import LogoWithText from "../src/assets/logo_tag_2.png"
 import Products from "./pages/Products";
 import BlogCarousel from "./pages/Blogs";
 import  { FeaturesTabs } from "./components/FeaturesDropDown";
@@ -34,6 +33,7 @@ import { TextGenerateEffect } from "./components/GeneratedText";
 // import {  FoundersCarousel, FoundersGrid, FoundersStack } from "./components/FounderAndCeoTest";
 // import FoundersGridHover from "./components/CeoAndFounders/FoundersGrid";
 
+import insights from "../src/assets/insights_new.jpg"
 //#38b6ff app colour
 function App() {
   const appRouter = createBrowserRouter([
@@ -235,7 +235,7 @@ export const StartingHero = () => {
       </motion.div>: 
        <div className="pt-10 flex flex-col items-center justify-center gap-5 w-full h-full ">
         <BlurIn className="max-w-4xl w-full font-semibold tracking-tight p-2 ">
-          <img src={OnlyLogo} className="max-w-xl w-full mx-auto"/>
+          <img src={LogoWithText} className="max-w-4xl  w-full mx-auto"/>
         </BlurIn>
         <div className="text-zinc-800 text-center  text-4xl sm:text-6xl font-bold tracking-tighter md:text-[4.1rem] ">
            <TextGenerateEffect words={words}/>
@@ -443,10 +443,10 @@ export const MacbookShowcase = () => {
       >
         <div className="w-full max-w-5xl mx-auto px-4">
           <img
-            src={aicatalog}
+            src={insights}
             alt="hero"
-            height={1000}
-            width={1000}
+            height={720}
+            width={1400}
             className="mx-auto rounded-2xl object-fill h-full aspect-video"
             draggable={false}
           />

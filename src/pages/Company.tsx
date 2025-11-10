@@ -1,7 +1,7 @@
-import productDashBoard from "../assets/Screenshot 2025-11-05 232626.png";
+// import productDashBoard from "../assets/Screenshot 2025-11-05 232626.png";
 
 import { motion } from "motion/react";
-// import { PointerHighlight } from "../components/PointerHighLight";
+import aiCatalog from "../assets/ai_catalog_new.jpg"
 import { HoverEffect } from "../components/CardHoverEffect";
 import { TalkToExpert } from "../components/Partnership";
 import Sarvarth from "../assets/sarvarta.webp";
@@ -143,7 +143,7 @@ export function CompanySection() {
         >
           <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700">
             <img
-              src={productDashBoard}
+              src={aiCatalog}
               alt="Landing page preview"
               className="h-auto w-full object-cover"
               height={1000}

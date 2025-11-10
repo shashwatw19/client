@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <TrackOrder />
       </div>{" "}
-      <div className="font-semibold text-sm text-zinc-800 text-center mt-5">©2025. Naicos All Rights Reserved.</div>
+      <div className="font-semibold text-sm text-zinc-800 text-center mt-5 uppercase">©2025. naicos All Rights Reserved.</div>
     </div>
   );
 };

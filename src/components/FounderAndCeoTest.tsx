@@ -144,14 +144,14 @@ export const FoundersCarousel: React.FC<{ founders?: Founder[]; className?: stri
         {founders.map((f, idx) => (
           <motion.article
             key={f.id}
-            className="snap-start flex-shrink-0 w-[84%] sm:w-[48%] md:w-[40%] lg:w-[32%] bg-white rounded-2xl border border-gray-100 shadow-sm"
+            className="snap-start shrink-0 w-[84%] sm:w-[48%] md:w-[40%] lg:w-[32%] bg-white rounded-2xl border border-gray-100 shadow-sm"
             whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(16,24,40,0.12)" }}
             transition={{ type: "spring", stiffness: 220, damping: 20 }}
           >
             <div className="flex items-stretch">
               <div className="w-1/3 bg-gray-100 rounded-l-2xl flex items-center justify-center">
                 {/* placeholder square image */}
-                <div className="w-full h-full bg-gradient-to-br from-indigo-50 to-pink-50 flex items-center justify-center">
+                <div className="w-full h-full bg-linear-to-br from-indigo-50 to-pink-50 flex items-center justify-center">
                   <span className="text-sm text-gray-500">{f.name.split(" ")[0]}</span>
                 </div>
               </div>

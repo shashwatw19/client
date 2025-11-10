@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion ,  type Variants } from "framer-motion";
-import catalogScreen from "../assets/catalog_white_bg.png";
-import pricing from "../assets/pricing_white_bg.png";
-import fulfillment from "../assets/fulfillment_white_bg.png";
-import growth from "../assets/growth_white_bg.png";
+import { motion, AnimatePresence, useReducedMotion, type Variants } from "framer-motion";
+import catalogScreen from "../assets/prodcut_cat_new.jpeg";
+import pricing from "../assets/pricing_new.jpeg";
+import fulfillment from "../assets/fulfilment_new.jpeg";
+import growth from "../assets/growth_new.jpeg";
 import { Link } from "react-router";
-
+import aiCatalog from "../assets/ai_studio_new.jpeg";
 type Section = {
   id: string;
   title: string;
@@ -16,31 +16,42 @@ type Section = {
 
 const DEFAULT_SECTIONS: Section[] = [
   {
+    id: "/company",
+    title: "AI STUDIO",
+    body: `YOUR AI CREATIVES POWERHOUSE.
+No need to hire a agency or go around photo studios / content creators for getting your catalog built. You can now create a search engine optimized professional listing right at your desk.`,
+    image: aiCatalog,
+  },
+
+  {
     id: "/catalog",
     title: "CATALOG",
-    body:
-      "CATALOG THAT CLICKS, with an all in one catalog manager, AI Powered image & video creation, catalog Syncronized across platforms.",
+    body: `CATALOG THAT CLICKS.
+Now Create, Enrich and Transform Catalogs without any external help. An affordable tool which maintains your product information data and transforms it into platform required templates.`,
     image: catalogScreen,
   },
   {
     id: "/pricing",
     title: "PRICING",
-    body:
-      "pricing THAT PERFORMS with competitive benchmarking, AI-powered price recommendations, and insights on top selling products.",
+    body: `PRICING THAT PERFORMS.
+AI driven price recommendations with competitive price benchmarking, helps you get higher sales and better conversions. Also get AI-powered price recommendations, and insights on top selling products.
+`,
     image: pricing,
   },
   {
     id: "/fulfillment",
-    title: "FULFIMENT",
-    body:
-      "FULFILMENT THAT FLOWS, connected to all service providers, LET’S YOU bring your own rate card, and powered by AI agents for seamless deliveries.",
+    title: "FULFILMENT",
+    body: `FULFILMENT THAT FLOWS.
+One platform for your B2C & B2B shipping needs. Connected to all service providers, let's you setup your own rate card, and powered by AI agents for seamless deliveries, with pre and post shipping management
+`,
     image: fulfillment,
   },
   {
     id: "/growth",
     title: "GROWTH & MARKETING",
-    body:
-      "GROWTH Amplifier, a Simplified CRM for customer connect, upsell, custom campaigns, and order checkout, all enbled through whatsapp",
+    body: `THE GROWTH AMPLIFIER.
+Enabled through WhatsApp and integrated with product information management and fulfilment system, it ensures to keep customers updated on order’s lifecycle. Send personalized promotions via custom campaigns.
+`,
     image: growth,
   },
 ];
@@ -53,7 +64,7 @@ export const FeaturesTabs: React.FC<{ sections?: Section[]; className?: string }
   const shouldReduceMotion = useReducedMotion();
 
   // framer-motion variants
-  const container : Variants = {
+  const container: Variants = {
     hidden: { opacity: 0, y: 12 },
     show: {
       opacity: 1,
@@ -66,12 +77,12 @@ export const FeaturesTabs: React.FC<{ sections?: Section[]; className?: string }
     },
   };
 
-  const item : Variants = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 10 },
     show: { opacity: 1, y: 0, transition: { duration: shouldReduceMotion ? 0 : 0.42, ease: "easeOut" } },
   };
 
-  const imageVariants : Variants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, y: 12, scale: 0.995 },
     show: { opacity: 1, y: 0, scale: 1, transition: { duration: shouldReduceMotion ? 0 : 0.45, ease: "easeOut" } },
     exit: { opacity: 0, y: -8, transition: { duration: shouldReduceMotion ? 0 : 0.32 } },
@@ -82,17 +93,17 @@ export const FeaturesTabs: React.FC<{ sections?: Section[]; className?: string }
       className={`w-full max-w-5xl mx-auto px-4 mt-60 ${className ?? ""}`}
       initial="hidden"
       whileInView="show"
-      viewport={{ once : true , amount: 0.5 }}
+      viewport={{ once: true, amount: 0.5 }}
       variants={container}
       aria-label="Solutions tabs"
     >
       <div className="text-center my-12 md:my-16 lg:my-20">
         <h2 className="mx-auto max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-linear-to-r from-black via-gray-800 to-gray-700">
-            Your Complete Commerce Stack
+          Your Complete Commerce Stack
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-2">
+      <div className="flex md:flex-row flex-col-reverse max-w-5xl items-start p-2 gap-6 ">
         <motion.div className="space-y-4" variants={item}>
           <div className="space-y-4">
             {sections.map((s, i) => {
@@ -128,11 +139,11 @@ export const FeaturesTabs: React.FC<{ sections?: Section[]; className?: string }
                           <div className="pb-4">
                             <Link to={s.id}>
                               <button
-                              className="w-full bg-[#38b6ff] text-white font-semibold py-3 rounded-b-xl"
-                              aria-label={`Learn more about ${s.title}`}
-                            >
-                              Know More
-                            </button>
+                                className="w-full bg-[#38b6ff] text-white font-semibold py-3 rounded-b-xl"
+                                aria-label={`Learn more about ${s.title}`}
+                              >
+                                Know More
+                              </button>
                             </Link>
                           </div>
                         </motion.div>
@@ -156,7 +167,7 @@ export const FeaturesTabs: React.FC<{ sections?: Section[]; className?: string }
                 animate="show"
                 exit="exit"
                 transition={{ duration: shouldReduceMotion ? 0 : 0.45 }}
-                className="w-full h-96 md:h-[420px] flex items-center justify-center bg-white"
+                className="w-full h-96 md:h-[550px] flex items-center justify-center bg-white"
               >
                 <img
                   src={sections[active]?.image && sections[active].image}

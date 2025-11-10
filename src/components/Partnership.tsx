@@ -1,5 +1,5 @@
 import productImg from '../assets/product.webp'
-
+import { cn } from '../lib/utils'
 import partner1 from '../assets/partner1.avif'
 import partner2 from '../assets/partner2.jpeg'
 import partner3 from '../assets/partner3.jpeg'
@@ -75,7 +75,12 @@ export const TalkToExpert = () => {
   )
 }
 export const PartneredWith = () => {
-  const images = [partner1, partner2, partner3, partner4 ,  partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13 ]
+  const images = [partner1, partner2, partner3, partner4 , 
+    partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13 , 
+    partner1, partner2, partner3, partner4 , 
+    partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13 , partner1, partner2, partner3, partner4 , 
+    partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13, partner1, partner2, partner3, partner4 , 
+    partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13 ]
   const duplicated = [...images, ...images]
 
   return (
@@ -138,4 +143,85 @@ export const PartneredWith = () => {
     </div>
   )
 }
+
+
+
+
+
+interface Logo {
+  name: string;
+  src: string;
+}
+
+const logos: Logo[] = [
+  { name: "TechCorp", src: partner1},
+  { name: "DataFlow", src: partner2},
+  { name: "CloudSync", src: partner3},
+  { name: "DevTools", src: partner4},
+  { name: "AppNest", src:  partner5},
+  { name: "CodeBase", src:  partner6},
+  { name: "NetWorks", src:  partner7},
+  { name: "ByteLab", src:  partner8},
+  { name: "ByteLab", src:  partner9},
+  { name: "ByteLab", src:  partner10},
+  { name: "ByteLab", src:  partner11},
+  { name: "ByteLab", src:  parnter12},
+  { name: "ByteLab", src:  partner13},
+];
+
+export const InfiniteLogoScroll = () => {
+  return (
+    <section className="w-full py-16 bg-muted/30">
+      <div className="container mx-auto px-4">
+      
+        
+        <div className="relative overflow-hidden">
+          {/* Gradient overlays for smooth fade effect */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-background to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-r from-background to-transparent z-10" />
+          
+          {/* Scrolling container */}
+          <div className="flex w-fit animate-scroll hover:[animation-play-state:paused]">
+            {/* First set of logos */}
+            {logos.map((logo, index) => (
+              <div
+                key={`first-${index}`}
+                className={cn(
+                  "flex items-center justify-center mx-8 shrink-0",
+                  "transition-all duration-300 hover:scale-110"
+                )}
+              >
+                <div className="flex items-center gap-3 px-6 py-4 rounded-lg bg-card border border-border shadow-sm">
+                  <img className='' src={logo.src}/>
+                 
+                </div>
+              </div>
+            ))}
+            
+            {/* Duplicate set for seamless loop */}
+            {logos.map((logo, index) => (
+              <div
+                key={`second-${index}`}
+                className={cn(
+                  "flex items-center justify-center mx-8 shrink-0",
+                  "transition-all duration-300 hover:scale-110"
+                )}
+              >
+                <div className="flex items-center gap-3 px-6 py-4 rounded-lg bg-card border border-border shadow-sm">
+                  <img className="text-4xl" src={logo.src}/>
+                  
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <p className="text-center mt-8 text-sm text-muted-foreground">
+          Hover to pause • Seamless infinite scroll
+        </p>
+      </div>
+    </section>
+  );
+};
+
 export default Partnership

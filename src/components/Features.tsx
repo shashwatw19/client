@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'motion/react'
+import homeScreen from "../assets/home_new.jpeg"
 
 const Features = () => {
   const containerVariants: Variants = {
@@ -46,9 +47,9 @@ const Features = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.img
-        src="https://lightsteelblue-hyena-752200.hostingersite.com/wp-content/uploads/2025/11/db2-483x1024.webp"
-        width={220}
-        height={220}
+        src={homeScreen}
+        width={280}
+        height={280}
         alt="feature"
         variants={imageVariants}
         whileHover={{ scale: 1.05, rotate: 2 }}
