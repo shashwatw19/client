@@ -21,7 +21,7 @@ export function OverlappingScrollSlider({ slides }: OverlappingScrollSliderProps
 
   return (
     <div ref={containerRef} className="relative w-full max-w-7xl mx-auto h-1/2" style={{ height: `${containerHeight}vh` }}>
-      <div className="sticky top-0 h-[50%]  overflow-hidden">
+      <div className="sticky top-0 h-[40%]  overflow-hidden">
         {slides.map((slide, index) => (
           <AnimatedSlide
             key={index}

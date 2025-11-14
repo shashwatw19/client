@@ -78,13 +78,11 @@ export const PartneredWith = () => {
   const images = [partner1, partner2, partner3, partner4 , 
     partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13 , 
     partner1, partner2, partner3, partner4 , 
-    partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13 , partner1, partner2, partner3, partner4 , 
-    partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13, partner1, partner2, partner3, partner4 , 
-    partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13 ]
+    partner5,partner6,partner7,partner8,partner9,partner10,partner11,parnter12,partner13]
   const duplicated = [...images, ...images]
 
   return (
-    <div className="flex flex-col items-center justify-center my-20 p-2 bg-white ">
+    <div className="flex flex-col items-center justify-center p-2 bg-white ">
       <h1 className="text-zinc-800 text-3xl font-bold my-10 capitalize">
         Working with leading brand and retailers
       </h1>

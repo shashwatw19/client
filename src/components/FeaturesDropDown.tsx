@@ -5,7 +5,7 @@ import pricing from "../assets/pricing_new.jpeg";
 import fulfillment from "../assets/fulfilment_new.jpeg";
 import growth from "../assets/growth_new.jpeg";
 import { Link } from "react-router";
-import aiCatalog from "../assets/ai_studio_new.jpeg";
+import aiCatalog from "../assets/new_ai_cat.png";
 type Section = {
   id: string;
   title: string;

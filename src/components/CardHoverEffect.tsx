@@ -55,7 +55,7 @@ export const HoverEffect = ({
             </div>
             <div className="flex flex-col justify-center flex-1 min-w-0">
               <div className="min-w-0">
-                <CardTitle className="mt-0 truncate">{item.title}</CardTitle>
+                <CardTitle className="mt-0">{item.title}</CardTitle>
                 <CardPosition className="mt-1">{item.position}</CardPosition>
               </div>
               <CardDescription className="mt-2">{item.description}</CardDescription>

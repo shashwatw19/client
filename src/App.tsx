@@ -235,9 +235,9 @@ export const StartingHero = () => {
       </motion.div>: 
        <div className="pt-10 flex flex-col items-center justify-center gap-5 w-full h-full ">
         <BlurIn className="max-w-4xl w-full font-semibold tracking-tight p-2 ">
-          <img src={LogoWithText} className="max-w-4xl  w-full mx-auto"/>
+          <img src={LogoWithText} className="max-w-3xl w-full mx-auto mt-20"/>
         </BlurIn>
-        <div className="text-zinc-800 text-center  text-4xl sm:text-6xl font-bold tracking-tighter md:text-[4.1rem] ">
+        <div className="text-zinc-800 text-center text-3xl sm:text-6xl -mt-10 font-bold tracking-tighter md:text-[3.7rem] ">
            <TextGenerateEffect words={words}/>
         </div>
 

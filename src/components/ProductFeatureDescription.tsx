@@ -1,13 +1,5 @@
-// ...existing code...
 import { motion } from "framer-motion";
 import {  type JSX } from "react";
-
-
-
-
-
-
-
 
 export  function FeatureHeroSection(){
   return (
@@ -75,8 +67,6 @@ export  function FeatureHeroSection(){
   );
 }
 
-
-
 type FeatureSectionCardWhiteProps = {
   title: string
   description: string;
@@ -123,10 +113,10 @@ export function FeatureSectionCardWhite({
               <div
                 className="text-black font-extrabold leading-[0.85] tracking-tight text-right whitespace-pre-line uppercase"
                 style={{
-                  fontSize: "clamp(2.2rem, 6.5vw, 5.8rem)",
-                  lineHeight: 0.85,
-                  letterSpacing: "-0.02em",
-                  fontFamily: "inherit",
+                  fontSize: "clamp(1.6rem, 5.5vw, 4rem)",
+              lineHeight: 0.86,
+              letterSpacing: "-0.02em",
+              WebkitFontSmoothing: "antialiased"
                 }}
               >
                {title}
@@ -150,8 +140,6 @@ export function FeatureSectionCardWhite({
 }
 
 
-
-
 type SmartImageryHeroProps = {
   title: string;
   description: string;
@@ -159,7 +147,6 @@ type SmartImageryHeroProps = {
   videoSrc?: string;
 
 };
-
 
 export function FeatureSectionCardBlack({
   title = "",
@@ -183,10 +170,10 @@ export function FeatureSectionCardBlack({
             <h1
               className="font-extrabold leading-[0.78] tracking-tight uppercase"
               style={{
-                fontSize: "clamp(2.2rem, 6.5vw, 5.8rem)",
-                lineHeight: 0.78,
-                letterSpacing: "-0.02em",
-                WebkitFontSmoothing: "antialiased",
+                fontSize: "clamp(1.6rem, 5.5vw, 4rem)",
+              lineHeight: 0.86,
+              letterSpacing: "-0.02em",
+              WebkitFontSmoothing: "antialiased"
               }}
             >
               {title.split("\n").map((l, i) => (
