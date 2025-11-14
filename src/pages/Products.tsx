@@ -1,12 +1,8 @@
-import catalog from "../assets/catalog_white_bg.png";
-import pricing from "../assets/pricing_white_bg.png";
-import growth from "../assets/growth_white_bg.png";
-import fulfillment from "../assets/fulfillment_white_bg.png";
+
 import { TalkToExpert } from "../components/Partnership";
-import { Link } from "react-router";
 import catalogScreen from "../assets/prodcut_cat_new.jpeg";
 import pricingScreen from "../assets/pricing_new.jpeg";
-import aiStudioScreen from "../assets/ai_catalog_new.jpg";
+// import aiStudioScreen from "../assets/ai_catalog_new.jpg";
 import fulfilmentScreen from "../assets/fulfilment_new.jpeg";
 import growtScreen from "../assets/growth_new.jpeg";
 import FeatureDescription, { type FeatureDescriptionType } from "../components/FeatureDescription";
